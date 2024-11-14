@@ -27,7 +27,7 @@
 &kp LALT   &kp A      &kp S           &kp D      &kp F      &kp G                           &kp H      &kp J      &kp K      &kp L       &mt LGUI SEMI  &kp SQT
 &kp LCTRL  &kp Z      &kp X           &kp C      &kp V      &kp B                           &kp N      &kp M      &kp COMMA  &kp DOT     &kp FSLH       &kp RALT
            &kp LBKT   &mt LGUI RBKT   &mo RAISE  &kp SPACE                                             &kp MINUS  &kp EQUAL  &kp ENTER   &mo LOWER
-&kp HOME   &kp LSHIFT &kp BSPC        &kp PG_UP  &kp END    &kp INS                         &kp DEL    &kp PG_DN  &kp PG_DN  &kp PG_DN   &kp PG_DN      &kp PIPE
+&kp HOME   &kp LSHIFT &kp BSPC        &kp PG_UP  &kp END    &bt BT_CLR                         &kp DEL    &kp PG_DN  &kp PG_DN  &kp PG_DN   &kp PG_DN      &kp PIPE
             >;
         };
 
