@@ -22,12 +22,12 @@
             //                                         |  Raise  |    ~    |   GUI   |  Lower  |
 
             bindings = <
-&kp TILDE  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5    &kp N6    &kp N7       &kp N8         &kp N9    &kp N0     &kp HOME
-&kp TAB    &kp Q      &kp W      &kp E     &kp R      &kp T     &kp Y     &kp U        &kp I          &kp O     &kp P      &kp BSLH
-&kp LCTRL  &kp A      &kp S      &kp D     &kp F      &kp G     &kp H     &kp J        &kp K          &kp L     &kp SEMI   &kp APOS
-&kp LSHFT  &kp Z      &kp X      &kp C     &kp V      &kp B     &kp N     &kp M        &kp COMMA      &kp DOT   &kp FSLH   &kp RSHFT
-           &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT                       &kp LEFT     &kp DOWN       &kp UP    &kp RIGHT
-&kp COMMA  &kp DEL    &kp LGUI   &kp LALT  &kp LSHFT  &kp BSPC  &kp DOWN  &kp PAGE_UP  &kp PAGE_DOWN  &kp RALT  &kp RET    &kp SPACE
+&kp TILDE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5  &kp N6     &kp N7       &kp N8         &kp N9    &kp N0     &kp HOME
+&kp TAB    &kp Q      &kp W      &kp E     &kp R     &kp T   &kp Y      &kp U        &kp I          &kp O     &kp P      &kp BSLH
+&kp LCTRL  &kp A      &kp S      &kp D     &kp F     &kp G   &kp H      &kp J        &kp K          &kp L     &kp SEMI   &kp APOS
+&kp LSHFT  &kp Z      &kp X      &kp C     &kp V     &kp B   &kp N      &kp M        &kp COMMA      &kp DOT   &kp FSLH   &kp RSHFT
+           &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT                     &kp LEFT     &kp DOWN       &kp UP    &kp RIGHT
+&kp BSPC   &kp LCTRL  &kp LALT   &kp LGUI  &kp DEL   &kp N1  &kp RCTRL  &kp PAGE_UP  &kp PAGE_DOWN  &kp RALT  &kp RET    &kp SPACE
             >;
         };
     };
