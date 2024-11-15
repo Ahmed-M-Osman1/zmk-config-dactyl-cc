@@ -30,5 +30,16 @@
 &kp BSPC   &kp LCTRL  &kp LALT   &kp LGUI  &kp DEL   &kp N1  &kp RCTRL  &kp PAGE_UP  &kp PAGE_DOWN  &kp RALT  &kp RET    &kp SPACE
             >;
         };
+
+        layer_1 {
+            bindings = <
+&kp C_RESET  &trans             &kp K_PREVIOUS  &kp C_PLAY  &kp C_NEXT     &trans  &kp C_BRIGHTNESS_INC  &kp N7         &kp N8   &kp N9   &trans     &kp C_RESET
+&trans       &kp C_VOLUME_UP    &kp LA(LEFT)    &trans      &kp LA(RIGHT)  &trans  &kp C_BRIGHTNESS_DEC  &kp N4         &kp N5   &kp N6   &kp MINUS  &trans
+&trans       &kp C_VOLUME_DOWN  &trans          &trans      &trans         &trans  &kp PLUS              &kp N1         &kp N2   &kp N3   &kp FSLH   &trans
+&trans       &kp F1             &kp F2          &kp F3      &kp F4         &trans  &kp STAR              &kp COMMA      &kp N0   &kp DOT  &kp RET    &trans
+             &kp F5             &kp F6          &kp F7      &kp F8                                       &kp F9         &kp F10  &kp F11  &kp F12
+&trans       &trans             &trans          &trans      &trans         &trans  &trans                &kp C_AC_HOME  &kp END  &trans   &trans     &trans
+            >;
+        };
     };
 };
