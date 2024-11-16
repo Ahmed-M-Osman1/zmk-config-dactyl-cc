@@ -1,8 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
-#include <dt-bindings/zmk/bt.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define RAISE   1
@@ -59,8 +58,8 @@
         layer_4 {
             bindings = <
 &trans      &trans      &trans  &trans  &trans  &trans  &trans            &trans          &trans          &trans            &trans             &trans
-&trans      &trans      &trans  &trans  &trans  &trans  &trans            &mwh SCROLL_UP  &mmv MOVE_UP    &mwh SCROLL_DOWN  &trans             &trans
-&trans      &trans      &trans  &trans  &trans  &trans  &mwh SCROLL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mwh SCROLL_RIGHT  &trans
+&trans      &trans      &trans  &trans  &trans  &trans  &trans            &msc SCROLL_UP  &mmv MOVE_UP    &msc SCROLL_DOWN  &trans             &trans
+&trans      &trans      &trans  &trans  &trans  &trans  &msc SCROLL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc SCROLL_RIGHT  &trans
 &trans      &trans      &trans  &trans  &trans  &trans  &mkp MB3          &trans          &trans          &trans            &trans             &trans
             &trans      &trans  &trans  &trans                            &trans          &trans          &trans            &trans
 &kp LS(N8)  &kp LS(N9)  &trans  &trans  &trans  &trans  &trans            &trans          &trans          &mkp MB3          &mkp MB1           &mkp MB2
