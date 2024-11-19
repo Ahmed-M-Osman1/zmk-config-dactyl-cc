@@ -74,7 +74,7 @@
 &trans        &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL  &kp LS(GT)  &kp LS(LBRC)  &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &kp ESC       &trans        &trans     &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans
               &trans        &trans        &trans     &trans                            &trans  &trans  &trans  &trans
-&kp LS(LPAR)  &kp LS(RPAR)  &trans        &trans     &trans      &trans        &studio_unlock  &trans  &trans  &trans  &trans  &trans
+&kp LS(LPAR)  &kp LS(RPAR)  &trans        &trans     &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
