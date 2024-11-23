@@ -1,8 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
-#include <dt-bindings/zmk/bt.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define RAISE   1
@@ -80,12 +79,12 @@
 
         qwerty {
             bindings = <
-&kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp HOME
-&kp TAB    &kp Q      &kp W      &kp E     &kp R     &kp T   &kp Y      &kp U      &kp I      &kp O     &kp P      &kp BSLH
-&kp CAPS   &kp A      &kp S      &kp D     &kp F     &kp G   &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp APOS
-&kp LSHFT  &kp Z      &kp X      &kp C     &kp V     &kp B   &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-           &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT                     &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT
-&kp ENTER  &kp ESC    &kp LALT   &kp LGUI  &kp DEL   &trans  &kp RCTRL  &kp PG_UP  &kp PG_DN  &kp RALT  &kp ENTER  &kp SPACE
+&kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp HOME
+&kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T   &kp Y      &kp U      &kp I      &kp O     &kp P      &kp BSLH
+&kp CAPS   &kp A      &kp S      &kp D      &kp F      &kp G   &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp APOS
+&kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B   &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+           &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT                      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT
+&kp TAB    &kp SPACE  &kp LALT   &kp LCTRL  &kp ENTER  &trans  &kp RCTRL  &kp PG_UP  &kp PG_DN  &kp RALT  &kp ENTER  &kp SPACE
             >;
         };
     };
