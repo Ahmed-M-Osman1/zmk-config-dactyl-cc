@@ -1,8 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
-#include <dt-bindings/zmk/bt.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define RAISE   1
@@ -25,12 +24,12 @@
             //                                         |  Raise  |    ~    |   GUI   |  Lower  |
 
             bindings = <
-&kp GRAVE  &kp N1          &kp N2          &kp N3       &kp N4            &kp N5  &kp N6     &kp N7            &kp N8         &kp N9          &kp N0           &kp HOME
-&kp Q      &kp Q           &kp W           &kp F        &kp P             &kp B   &kp J      &kp L             &kp U          &kp Y           &kp SEMI         &kp BSLH
-&kp LCTRL  &mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL R  &mt LEFT_SHIFT T  &kp G   &kp M      &mt LEFT_SHIFT N  &mt LCTRL E    &mt LEFT_ALT I  &mt LEFT_WIN O   &kp APOS
-&kp ESC    &kp Z           &kp X           &kp C        &kp D             &kp V   &kp K      &kp H             &kp COMMA      &kp DOT         &kp FSLH         &kp FSLH
-           &kp MINUS       &kp EQUAL       &kp LBKT     &kp RBKT                             &kp LEFT          &kp DOWN       &kp UP          &kp RIGHT
-&lt 3 TAB  &lt 2 SPACE     &kp LALT        &kp LGUI     &kp DEL           &tog 5  &kp RCTRL  &kp PAGE_UP       &kp PAGE_DOWN  &kp RALT        &lt 1 BACKSPACE  &lt 4 ENTER
+&kp CAPS   &kp N1       &kp N2     &kp N3    &kp N4    &kp N5  &kp N6     &kp N7       &kp N8         &kp N9    &kp N0           &kp HOME
+&kp TAB    &kp Q        &kp W      &kp E     &kp R     &kp T   &kp Y      &kp U        &kp I          &kp O     &kp P            &kp BSLH
+&kp ESC    &kp A        &kp S      &kp D     &kp F     &kp G   &kp H      &kp J        &kp K          &kp L     &kp SEMI         &kp APOS
+&kp LSHFT  &kp Z        &kp X      &kp C     &kp V     &kp B   &kp N      &kp M        &kp COMMA      &kp DOT   &kp FSLH         &kp FSLH
+           &kp MINUS    &kp EQUAL  &kp LBKT  &kp RBKT                     &kp LEFT     &kp DOWN       &kp UP    &kp RIGHT
+&lt 3 TAB  &lt 2 SPACE  &kp LALT   &kp LGUI  &kp DEL   &trans  &kp RCTRL  &kp PAGE_UP  &kp PAGE_DOWN  &kp RALT  &lt 1 BACKSPACE  &lt 4 ENTER
             >;
         };
 
@@ -75,17 +74,6 @@
 &trans        &kp ESC       &trans        &trans     &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans
               &trans        &trans        &trans     &trans                            &trans  &trans  &trans  &trans
 &kp LS(LPAR)  &kp LS(RPAR)  &trans        &trans     &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        qwerty {
-            bindings = <
-&kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp HOME
-&kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T   &kp Y      &kp U      &kp I      &kp O     &kp P      &kp BSLH
-&kp CAPS   &kp A      &kp S      &kp D      &kp F      &kp G   &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp APOS
-&kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B   &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-           &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT                      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT
-&kp TAB    &kp SPACE  &kp LALT   &kp LCTRL  &kp ENTER  &trans  &kp RCTRL  &kp PG_UP  &kp PG_DN  &kp RALT  &kp ENTER  &kp SPACE
             >;
         };
     };
