@@ -28,11 +28,11 @@
     // Node label 'touchpad' and address 0x74
         compatible = "azoteq,iqs550";
         reg = <0x74>; // I2C address
-    // *** CHANGE 8 to your RDY pin number ***
-        irq-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+    // *** CHANGE 10 to your RDY pin number ***
+        irq-gpios = <&pro_micro_d 10 GPIO_ACTIVE_HIGH>;
     // Optional, if you connected the reset pin:
     // *** CHANGE 7 to your RST pin number ***
-        reset-gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
+    // reset-gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
         // Optional orientation properties:
         // flip-x;
         // flip-y;
