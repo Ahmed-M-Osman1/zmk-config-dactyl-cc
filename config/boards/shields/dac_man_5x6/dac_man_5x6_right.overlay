@@ -18,8 +18,6 @@
 &i2c0 {
     status = "okay";
     clock-frequency = <400000>;
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-names = "default";
 
     touchpad: iqs550@74 {
         compatible = "azoteq,iqs550";
@@ -28,14 +26,5 @@
         reset-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>; // P0.11
         status = "okay";
         label = "IQS550_TOUCHPAD";
-    };
-};
-
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 15)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 17)>;
-        };
     };
 };
