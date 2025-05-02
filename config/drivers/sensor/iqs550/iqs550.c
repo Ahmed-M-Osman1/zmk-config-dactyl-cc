@@ -21,7 +21,9 @@
  
  #include "iqs550.h" // Renamed to iqs550.h, but content is for iqs5xx
  
- LOG_MODULE_REGISTER(IQS5XX, CONFIG_SENSOR_LOG_LEVEL);
+ #define LOG_LEVEL CONFIG_IQS550_LOG_LEVEL
+ #define LOG_MODULE_NAME iqs550
+ LOG_MODULE_REGISTER(LOG_MODULE_NAME);
  
  // Forward declarations
  static int iqs5xx_init(const struct device *dev);
@@ -33,12 +35,9 @@
      const struct iqs5xx_config *config = dev->config;
      uint8_t reg_buf[2];
      sys_put_be16(reg, reg_buf);
-     LOG_DBG("I2C Read: Reg=0x%04X, Len=%d", reg, len);
      int ret = i2c_write_read_dt(&config->i2c, reg_buf, sizeof(reg_buf), buf, len);
      if (ret != 0) {
-         LOG_ERR("I2C Read failed: %d", ret);
-     } else {
-         LOG_HEXDUMP_DBG(buf, len, "I2C Read Data:");
+         LOG_ERR("I2C Read failed: reg=0x%04X, ret=%d", reg, ret);
      }
      return ret;
  }
@@ -48,11 +47,9 @@
      uint8_t write_buf[len + 2];
      sys_put_be16(reg, write_buf);
      memcpy(&write_buf[2], buf, len);
-     LOG_DBG("I2C Write: Reg=0x%04X, Len=%d", reg, len);
-     LOG_HEXDUMP_DBG(buf, len, "I2C Write Data:");
      int ret = i2c_write_dt(&config->i2c, write_buf, sizeof(write_buf));
      if (ret != 0) {
-         LOG_ERR("I2C Write failed: %d", ret);
+         LOG_ERR("I2C Write failed: reg=0x%04X, ret=%d", reg, ret);
      }
      return ret;
  }
@@ -390,6 +387,3 @@
                            NULL); // No specific API needed for input reporting
  
  DT_INST_FOREACH_STATUS_OKAY(IQS5XX_INIT)
- 
- 
- 
