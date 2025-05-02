@@ -1,0 +1,14 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+config ZMK_MOUSE
+	default y
+	depends on IQS550
+
+config SENSOR
+	default y
+	depends on IQS550
+
+config I2C
+	default y
+	depends on IQS550

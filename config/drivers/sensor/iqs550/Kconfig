@@ -1,7 +1,7 @@
 # Copyright (c) 2024 The ZMK Contributors
 # SPDX-License-Identifier: Apache-2.0
 
-menuconfig IQS550
+config IQS550
 	bool "Azoteq IQS550 Touchpad Driver"
 	default n
 	depends on DT_HAS_AZOTEQ_IQS550_ENABLED
@@ -21,44 +21,8 @@ config IQS550_INIT_PRIORITY
 	help
 	  Device driver initialization priority.
 
-choice IQS550_LOG_LEVEL
-	prompt "Driver log level"
-	default IQS550_LOG_LEVEL_WRN
-	depends on LOG
-
-config IQS550_LOG_LEVEL_OFF
-	bool "Off"
-	help
-	  Do not write any driver log messages.
-
-config IQS550_LOG_LEVEL_ERR
-	bool "Error"
-	help
-	  Write only error messages.
-
-config IQS550_LOG_LEVEL_WRN
-	bool "Warning"
-	help
-	  Write only warning and error messages.
-
-config IQS550_LOG_LEVEL_INF
-	bool "Info"
-	help
-	  Write info, warning, and error messages.
-
-config IQS550_LOG_LEVEL_DBG
-	bool "Debug"
-	help
-	  Write debug, info, warning, and error messages.
-
-endchoice
-
-config IQS550_LOG_LEVEL
-	int
-	default 0 if IQS550_LOG_LEVEL_OFF
-	default 1 if IQS550_LOG_LEVEL_ERR
-	default 2 if IQS550_LOG_LEVEL_WRN
-	default 3 if IQS550_LOG_LEVEL_INF
-	default 4 if IQS550_LOG_LEVEL_DBG
+module = IQS550
+module-str = iqs550
+source "subsys/logging/Kconfig.template.log_config"
 
 endif # IQS550
