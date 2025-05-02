@@ -15,24 +15,14 @@
         ;
 };
 
-/* Add this to your existing .overlay file */
 &i2c0 {
-    // Assuming you use the primary I2C bus on nice!nano v2
     status = "okay";
-
-    // Make sure SCL/SDA pins are correctly set for nice!nano v2 if not default
-    // pinctrl-0 = <&i2c0_default>;
-    // pinctrl-names = "default";
-
     touchpad: iqs550@74 {
-    // Node label 'touchpad' and address 0x74
         compatible = "azoteq,iqs550";
-        reg = <0x74>; // I2C address
-    // *** CHANGE 10 to your RDY pin number ***
-        irq-gpios = <&pro_micro_d 10 GPIO_ACTIVE_HIGH>;
-    // Optional, if you connected the reset pin:
-    // *** CHANGE 7 to your RST pin number ***
-    // reset-gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
+        reg = <0x74>;
+        // User specified RDY=P1.10, RST=P1.11
+        irq-gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;  // RDY on P1.10
+        reset-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>; // RST on P1.11
         // Optional orientation properties:
         // flip-x;
         // flip-y;
