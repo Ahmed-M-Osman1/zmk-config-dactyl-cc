@@ -21,6 +21,18 @@ RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)       RC(0,6) RC(0,7) RC(0,8) RC
         >;
     };
 
+    &i2c0 {
+        status = "okay";
+        clock-frequency = <400000>;
+
+        iqs550@74 {
+            compatible = "azoteq,iqs550";
+            reg = <0x74>;
+            label = "IQS550";
+            rdy-gpios = <&pro_micro_d 3 GPIO_ACTIVE_HIGH>;  // Adjust pin as needed
+        };
+    };
+
 // Travis added A 1 row below, and made it the equals rather than comma. 
 
     kscan0: kscan {
