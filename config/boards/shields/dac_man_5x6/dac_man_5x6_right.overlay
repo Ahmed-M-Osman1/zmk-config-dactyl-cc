@@ -11,7 +11,7 @@
         , <&pro_micro_d 7 GPIO_ACTIVE_HIGH>
         , <&pro_micro_d 6 GPIO_ACTIVE_HIGH>
         , <&pro_micro_d 5 GPIO_ACTIVE_HIGH>
-	, <&pro_micro_d 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro_d 4 GPIO_ACTIVE_HIGH>
         ;
 };
 
@@ -25,6 +25,5 @@
         irq-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;  // P0.10
         reset-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>; // P0.11
         status = "okay";
-        label = "IQS550_TOUCHPAD";
     };
 };
