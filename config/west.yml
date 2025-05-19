@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/Ahmed-M-Osman1/zmk-azoteq
     - name: urob
       url-base: https://github.com/urob
   projects:
