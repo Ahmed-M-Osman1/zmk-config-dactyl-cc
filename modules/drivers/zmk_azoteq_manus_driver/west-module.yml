@@ -1,3 +1,1 @@
-# This file is intentionally empty
-# The module is discovered by west through the directory structure
-# and CMakeLists.txt files, not through this manifest
+{}
