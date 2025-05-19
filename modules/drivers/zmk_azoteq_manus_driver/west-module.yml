@@ -1,3 +1,4 @@
 # west-module.yml for zmk_azoteq_manus_driver
-build:
-  cmake: zephyr # Tells west this is a Zephyr CMake module
+manifest:
+  build:
+    cmake: zephyr # Tells west this is a Zephyr CMake module
