@@ -1,0 +1,47 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+config AZOTEQ_IQS550
+	bool "Azoteq IQS550 Touchpad Driver"
+	default n
+	select INPUT
+	select I2C
+	select GPIO
+	select LOG
+	select POINTING_DEVICE
+	help
+	  Enable the driver for the Azoteq IQS550 touchpad sensor.
+	  This sensor provides XY coordinates and touch status via I2C.
+
+if AZOTEQ_IQS550
+
+config AZOTEQ_IQS550_LOG_LEVEL_ERR
+	bool "Error"
+	select LOG_LEVEL_ERR
+	select LOG_LEVEL_SET
+
+config AZOTEQ_IQS550_LOG_LEVEL_WRN
+	bool "Warning"
+	select LOG_LEVEL_WRN
+	select LOG_LEVEL_SET
+
+config AZOTEQ_IQS550_LOG_LEVEL_INF
+	bool "Info"
+	select LOG_LEVEL_INF
+	select LOG_LEVEL_SET
+
+config AZOTEQ_IQS550_LOG_LEVEL_DBG
+	bool "Debug"
+	select LOG_LEVEL_DBG
+	select LOG_LEVEL_SET
+
+config AZOTEQ_IQS550_LOG_LEVEL
+	string "Log level"
+	default "ERR" if AZOTEQ_IQS550_LOG_LEVEL_ERR
+	default "WRN" if AZOTEQ_IQS550_LOG_LEVEL_WRN
+	default "INF" if AZOTEQ_IQS550_LOG_LEVEL_INF
+	default "DBG" if AZOTEQ_IQS550_LOG_LEVEL_DBG
+	default "ERR"
+
+endif # AZOTEQ_IQS550
+

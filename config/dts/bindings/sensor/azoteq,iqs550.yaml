@@ -1,0 +1,25 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+description: Azoteq IQS550 Touchpad
+
+compatible: "azoteq,iqs550"
+
+include: i2c-device.yaml
+
+properties:
+  irq-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      The RDY (Ready) pin. Indicates data is available for reading.
+      The pin should be configured as active high.
+
+  reset-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      The RESET pin. Used to reset the device.
+      The pin should be configured as active low.
+
+

@@ -19,11 +19,14 @@
     status = "okay";
     clock-frequency = <400000>;
 
-    touchpad: iqs550@74 {
-        compatible = "azoteq,iqs550";
+    touchpad: iqs5xx_manus@74 {
+        compatible = "azoteq,iqs-manus";
         reg = <0x74>;
-        irq-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;  // P0.10
-        reset-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>; // P0.11
+        irq-gpios = <&pro_micro_d 10 GPIO_ACTIVE_HIGH>;
         status = "okay";
+        // Optional orientation properties:
+        // flip-x;
+        // flip-y;
+        // switch-xy;
     };
 };

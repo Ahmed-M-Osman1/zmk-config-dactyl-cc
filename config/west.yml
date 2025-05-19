@@ -11,3 +11,5 @@ manifest:
       import: app/west.yml
   self:
     path: config
+    import:
+      - ../modules/drivers/zmk_azoteq_manus_driver/west-module.yml
