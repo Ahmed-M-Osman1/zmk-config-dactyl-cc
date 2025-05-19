@@ -1,0 +1,48 @@
+# Copyright (c) 2024 Manus AI
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  Sensor driver for the Azoteq IQS5xx series trackpad IC, adapted for Manus.
+
+compatible: "azoteq,iqs-manus"
+
+include: ["i2c-device.yaml", "gpio-consumer.yaml"]
+
+properties:
+  irq-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      The interrupt pin (RDY/DR) from the touchpad.
+      The pin should be configured as active high.
+
+  reset-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      The reset pin for the touchpad.
+      The pin should be configured as active low.
+
+  flip-x:
+    type: boolean
+    description: Flip the X axis.
+
+  flip-y:
+    type: boolean
+    description: Flip the Y axis.
+
+  switch-xy:
+    type: boolean
+    description: Switch the X and Y axes.
+
+  # Default resolutions for TPS65-201A-S (IQS550)
+  # These are not typically needed as the driver reads relative data
+  # x-resolution:
+  #   type: int
+  #   default: 3072
+  #   description: Horizontal resolution of the touchpad.
+  # y-resolution:
+  #   type: int
+  #   default: 2048
+  #   description: Vertical resolution of the touchpad.
+

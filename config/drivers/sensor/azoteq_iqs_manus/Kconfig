@@ -1,0 +1,28 @@
+# Copyright (c) 2024 Manus AI
+# SPDX-License-Identifier: Apache-2.0
+
+# Kconfig for Azoteq IQS-Manus Touchpad Driver
+
+config AZOTEQ_IQS_MANUS
+	bool "Azoteq IQS-Manus Touchpad Driver"
+	depends on I2C
+	depends on INPUT
+	select INPUT_POINTING_DEVICE
+	help
+	  Enable the Azoteq IQS-Manus series touchpad driver.
+	  This driver is adapted for ZMK and provides support for
+	  IQS5xx-based touchpads, with extensive debugging capabilities.
+
+if AZOTEQ_IQS_MANUS
+
+config AZOTEQ_IQS_MANUS_LOG_LEVEL
+	int "Log level for Azoteq IQS-Manus driver"
+	default 3 # LOG_LEVEL_INF
+	range 0 4
+	help
+	  Set the log level for the Azoteq IQS-Manus driver.
+	  0 = OFF, 1 = ERR, 2 = WRN, 3 = INF, 4 = DBG.
+	  For detailed debugging, set this to 4.
+
+endif # AZOTEQ_IQS_MANUS
+
