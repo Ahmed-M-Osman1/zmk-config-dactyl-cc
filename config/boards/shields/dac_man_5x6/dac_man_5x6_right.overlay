@@ -22,7 +22,7 @@
     touchpad: iqs5xx_manus@74 {
         compatible = "azoteq,iqs-manus";
         reg = <0x74>;
-        irq-gpios = <&pro_micro_d 10 GPIO_ACTIVE_HIGH>;
+        irq-gpios = <&pro_micro_d 2 GPIO_ACTIVE_HIGH>;
         status = "okay";
         // Optional orientation properties:
         // flip-x;
