@@ -1,13 +1,13 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
+      url-base: https://github.com
   projects:
     - name: zmk
-      remote: urob
-      revision: main-with-native-mouse
+      remote: zmkfirmware
+      revision: main
+      clone-depth: 1
+      url: https://github.com/Ahmed-M-Osman1/zmk-azoteq
       import: app/west.yml
   self:
     path: config
