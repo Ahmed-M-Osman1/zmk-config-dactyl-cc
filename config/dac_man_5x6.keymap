@@ -58,12 +58,12 @@
 
         mouse {
             bindings = <
-&trans        &trans        &trans  &trans  &trans  &trans  &trans            &trans          &trans          &trans            &trans             &trans
-&trans        &trans        &trans  &trans  &trans  &trans  &trans            &msc SCROLL_UP  &mmv MOVE_UP    &msc SCROLL_DOWN  &trans             &trans
-&trans        &trans        &trans  &trans  &trans  &trans  &msc SCROLL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc SCROLL_RIGHT  &trans
-&trans        &trans        &trans  &trans  &trans  &trans  &mkp MB3          &trans          &trans          &trans            &trans             &trans
-              &trans        &trans  &trans  &trans                            &trans          &trans          &trans            &trans
-&kp LS(LPAR)  &kp LS(RPAR)  &trans  &trans  &trans  &trans  &trans            &trans          &trans          &mkp MB3          &mkp MB1           &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
