@@ -4,13 +4,33 @@
     col-offset = <6>;
 };
 
+    chosen { // to read from trackpad.
+        zmk,mouse = &trackpad;
+    };
+
 &kscan0 {
     col-gpios
         = <&pro_micro_d 9 GPIO_ACTIVE_HIGH>
-        , <&pro_micro_d 8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro_d 10 GPIO_ACTIVE_HIGH>
         , <&pro_micro_d 7 GPIO_ACTIVE_HIGH>
         , <&pro_micro_d 6 GPIO_ACTIVE_HIGH>
         , <&pro_micro_d 5 GPIO_ACTIVE_HIGH>
 	, <&pro_micro_d 4 GPIO_ACTIVE_HIGH>
         ;
+};
+
+
+&i2c0 {
+    compatible = "nordic,nrf-twim";
+    sda-pin = <17>;
+    scl-pin = <20>;
+    status = "okay";
+
+    trackpad: trackpad@74 {
+        compatible = "azoteq,iqs5xx";
+        label = "AZOTEQ_IQS5XX";
+        status = "okay";
+        reg = <0x74>;
+        dr-gpios = <&pro_micro_d 8 GPIO_ACTIVE_HIGH>;
+    };
 };
