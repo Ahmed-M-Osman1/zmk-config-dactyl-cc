@@ -14,8 +14,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: corne_left
-    snippet: zmk-usb-logging
+    shield: dac_man_5x6_left
   - board: nice_nano_v2
     shield: dac_man_5x6_right
   - board: nice_nano_v2
