@@ -4,6 +4,8 @@
     col-offset = <6>;
 };
 
+/{
+
     chosen { // to read from trackpad.
         zmk,mouse = &trackpad;
     };
